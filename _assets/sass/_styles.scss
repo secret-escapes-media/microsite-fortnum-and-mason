@@ -1,1 +1,8 @@
 // general styles for the project that wouldn't be a reuseable component
+
+
+.extra-margin {
+  @include bp($xxl){
+    @include page-padding;
+  }
+}

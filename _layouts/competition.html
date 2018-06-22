@@ -12,9 +12,11 @@
     <div class="competition-title site-header__offset">
       <div class="competition-title__wrap">
         <div class="container container--no-padding text--center">
-          <h1 class="banner-title">{{page.title}}</h1>
-          <div class="space--lg"></div>
-          <a href="#entry-form" class="btn btn--lg btn--orange js-remove-sticky-enter">Enter Now</a>
+          <div class="width width--xxl">
+            <h1 class="banner-title">{{page.title}}</h1>
+            <div class="space--lg"></div>
+            <a href="#entry-form" class="btn btn--lg btn--orange js-remove-sticky-enter">Enter Now</a>
+          </div>
         </div>
       </div>
     </div>
@@ -23,41 +25,43 @@
 
       <div class="container text--center vpad--xl bg--light">
         <div class="container container--no-padding container--lg">
-          <p class="text--lg">{{page.intro}}</p>
+          <p class="text--xxl">{{page.intro}}</p>
         </div>
       </div>
 
       <div class="row row--4-4-4 row--no-gutters bg--white">
         <div class="col">
-          <div class="bg-img bg-img--1-1" style="background-image: url('{{site.img}}/img.jpg');"></div>
+          <div class="bg-img bg-img--1-1" style="background-image: url('{{site.img}}/content/01.jpg');"></div>
         </div>
         <div class="col">
-          <div class="bg-img bg-img--1-1" style="background-image: url('{{site.img}}/img.jpg');"></div>
+          <div class="bg-img bg-img--1-1" style="background-image: url('{{site.img}}/content/02.jpg');"></div>
         </div>
         <div class="col">
-          <div class="bg-img bg-img--1-1" style="background-image: url('{{site.img}}/img.jpg');"></div>
+          <div class="bg-img bg-img--1-1" style="background-image: url('{{site.img}}/content/03.jpg');"></div>
         </div>
       </div>
 
       <div class="container vpad--xxl section-spacing bg--white">
-        {% for item in page.prize-detail %}
-          <div class="bob{% cycle '', ' bob--swap' %}">
-            <div class="bob__img">
-              <div class="bg-img bg-img--3-2" style="background-image: url('{{site.img}}/img.jpg');"></div>
+        <div class="extra-margin">
+          {% for item in page.prize-detail %}
+            <div class="bob{% cycle '', ' bob--swap' %}">
+              <div class="bob__img">
+                <div class="bg-img bg-img--3-2" style="background-image: url('{{site.img}}/content/{{item.id}}.jpg');"></div>
+              </div>
+              <div class="bob__text">
+                <h2 class="title title--xl">{{item.title}}</h2>
+                <p class="text--lg">{{item.description}}</p>
+              </div>
             </div>
-            <div class="bob__text">
-              <h2 class="title title--md">{{item.title}}</h2>
-              <p>{{item.description}}</p>
-            </div>
-          </div>
-        {% endfor %}
+          {% endfor %}
+        </div>
       </div>
 
 
       <div id="entry-form" class="container vpad--xl bg--light text--center">
         <h3 class="title title--sm">Enter below for your chance to win</h3>
         <div class="space--lg"></div>
-        <div class="container container--lg bg--white">
+        <div class="width width--lg boxpad--sm bg--white">
           <iframe src="{{page.entry-form.url}}" width="100%" height="{{page.entry-form.height}}"></iframe>
         </div>
       </div>
@@ -80,7 +84,7 @@
 
     {% include modal/modal.html %}
 
-    <div class="bg__fixed" style="background-image: url('{{site.img}}/img.jpg');"></div>
+    <div class="bg__fixed" style="background-image: url('{{site.img}}/bg.jpg');"></div>
 
   </body>
 
