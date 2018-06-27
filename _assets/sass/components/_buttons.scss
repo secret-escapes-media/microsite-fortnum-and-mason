@@ -14,7 +14,10 @@
   @include transition;
   &--sm { padding: $s1 $s4; font-size: $s-2; }
   &--lg { padding: $s3 $s8; font-size: $s-1; }
-  &--orange { background-color: $fm-blue;
+  &--orange { background-color: $orange;
+    &:hover { background-color: $orange-dark; }
+  }
+  &--blue { background-color: $fm-blue;
     &:hover { background-color: $fm-blue-dark; }
   }
   &--outline {

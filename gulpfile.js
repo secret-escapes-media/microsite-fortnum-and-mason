@@ -120,6 +120,7 @@ gulp.task('build-main-js', function(cb) {
     './_assets/js/_components/modal.js',
     './_assets/js/_components/modal-nav.js',
     './_assets/js/_components/sticky-enter.js',
+    './_assets/js/_components/bg-fade.js',
 
     // custom js for project
     './_assets/js/main.js',

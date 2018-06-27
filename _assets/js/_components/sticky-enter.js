@@ -10,7 +10,7 @@ var container = document.createElement('div'),
 container.className = 'sticky-enter';
 link.id             = 'track-cta-sticky-enter';
 link.href           = '#entry-form';
-link.className      = 'btn btn--orange';
+link.className      = 'btn btn--blue';
 link.innerHTML      = 'Enter Now';
 
 // add link to container
