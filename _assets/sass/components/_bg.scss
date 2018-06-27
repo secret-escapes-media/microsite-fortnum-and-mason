@@ -13,6 +13,7 @@
     bottom: 0;
     z-index: $z-background;
     @include background-attributes;
+    background-position: top center;
     &-overlay {
       position: absolute;
       top: 0;

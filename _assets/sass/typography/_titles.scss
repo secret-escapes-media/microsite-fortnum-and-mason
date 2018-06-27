@@ -80,10 +80,12 @@
 
   // custom banner headline
   font-family: $font-title-01;
-  font-size: $s9;
+  font-size: $s5;
   line-height: 1.15;
   letter-spacing: -.025em;
-  // @include bp($md){ font-size: $s7; }
-  // @include bp($xl){ font-size: $s10; }
+  @include bp($sm){ font-size: $s6; }
+  @include bp($md){ font-size: $s7; }
+  @include bp($lg){ font-size: $s8; }
+  @include bp($xxl){ font-size: $s9; }
 
 }
